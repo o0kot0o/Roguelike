@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2ad4c48-13cf-4a19-bb9f-97f6dd5a65ef" name="Default" comment="More on Maps!&#10;&#10;Created a generic load map function&#10;Utility file for utilities duh! :D&#10;Generic tile coloring&#10;&#10;&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Entity.py" afterPath="$PROJECT_DIR$/Entity.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Map.py" afterPath="$PROJECT_DIR$/Map.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Player.py" afterPath="$PROJECT_DIR$/Player.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Utility.py" afterPath="$PROJECT_DIR$/Utility.py" />
+    <list default="true" id="c2ad4c48-13cf-4a19-bb9f-97f6dd5a65ef" name="Default" comment="Experimental Raycasting">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Roguelike.iws" />
@@ -37,6 +33,7 @@
               <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
               <folding>
                 <element signature="e#43#70#0" expanded="true" />
+                <marker date="1421433063165" expanded="true" signature="670:815" placeholder="&quot;&quot;&quot;...&quot;&quot;&quot;" />
               </folding>
             </state>
           </provider>
@@ -91,6 +88,8 @@
               <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
               <folding>
                 <element signature="e#19#46#0" expanded="true" />
+                <marker date="1421435135075" expanded="true" signature="94:381" placeholder="..." />
+                <marker date="1421435135075" expanded="true" signature="157:381" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -113,6 +112,9 @@
               <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
               <folding>
                 <element signature="e#19#46#0" expanded="true" />
+                <marker date="1421439485554" expanded="true" signature="123:1942" placeholder="..." />
+                <marker date="1421439485554" expanded="true" signature="967:1040" placeholder="..." />
+                <marker date="1421439485554" expanded="true" signature="1076:1942" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -503,7 +505,13 @@
       <option name="project" value="LOCAL" />
       <updated>1421435644665</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Experimental Raycasting">
+      <created>1421440522018</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1421440522018</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -576,7 +584,8 @@
     <MESSAGE value="Entity, Player Work&#10;" />
     <MESSAGE value="MAPS!&#10;&#10;Created 'Tile' and 'Map' classes&#10;Entity and Map/Tile collision&#10;" />
     <MESSAGE value="More on Maps!&#10;&#10;Created a generic load map function&#10;Utility file for utilities duh! :D&#10;Generic tile coloring&#10;&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="More on Maps!&#10;&#10;Created a generic load map function&#10;Utility file for utilities duh! :D&#10;Generic tile coloring&#10;&#10;&#10;" />
+    <MESSAGE value="Experimental Raycasting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Experimental Raycasting" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -590,6 +599,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#43#70#0" expanded="true" />
+            <marker date="1421433063165" expanded="true" signature="670:815" placeholder="&quot;&quot;&quot;...&quot;&quot;&quot;" />
           </folding>
         </state>
       </provider>
@@ -632,6 +642,7 @@
           <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
           <folding>
             <element signature="e#43#70#0" expanded="true" />
+            <marker date="1421433063165" expanded="true" signature="670:815" placeholder="&quot;&quot;&quot;...&quot;&quot;&quot;" />
           </folding>
         </state>
       </provider>
@@ -650,6 +661,8 @@
           <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
           <folding>
             <element signature="e#19#46#0" expanded="true" />
+            <marker date="1421435135075" expanded="true" signature="94:381" placeholder="..." />
+            <marker date="1421435135075" expanded="true" signature="157:381" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -668,6 +681,9 @@
           <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
           <folding>
             <element signature="e#19#46#0" expanded="true" />
+            <marker date="1421439485554" expanded="true" signature="123:1942" placeholder="..." />
+            <marker date="1421439485554" expanded="true" signature="967:1040" placeholder="..." />
+            <marker date="1421439485554" expanded="true" signature="1076:1942" placeholder="..." />
           </folding>
         </state>
       </provider>
