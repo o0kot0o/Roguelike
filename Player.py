@@ -1,4 +1,5 @@
 __author__ = 'Kot'
+import libtcodpy as libtcod
 from Entity import Entity
 
 
@@ -9,13 +10,15 @@ class Player(Entity):
     def update(self):
         if self.keylist[ord('w')] == True:
             self.y -= 1
-        elif self.keylist[ord('s')] == True:
+        if self.keylist[ord('s')] == True:
             self.y += 1
-        elif self.keylist[ord('d')] == True:
+        if self.keylist[ord('d')] == True:
             self.x += 1
-        elif self.keylist[ord('a')] == True:
+        if self.keylist[ord('a')] == True:
             self.x -= 1
 
-    def render(self):
+    def render(self, con):
         #TODO: DO THIS :)
-        return
+        libtcod.console_set_default_foreground(con, libtcod.white)
+        libtcod.console_put_char(con, self.x, self.y, '@', libtcod.BKGND_NONE)
+

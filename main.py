@@ -22,18 +22,15 @@ kb = Keyboard(KEYLIST)
 player = Player('player', SCREEN_WIDTH/2, SCREEN_HEIGHT/2, KEYLIST)
 
 while not libtcod.console_is_window_closed():
-    libtcod.console_set_default_foreground(con, libtcod.white)
-    libtcod.console_put_char(con, player.x, player.y, '@', libtcod.BKGND_NONE)
+    libtcod.console_clear(con)
 
+    KEYLIST = kb.update()
+    player.update()
+
+    player.render(con)
 
     libtcod.console_blit(con, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0, 0, 0)
     libtcod.console_flush()
-
-    KEYLIST = kb.update()
-
-    libtcod.console_put_char(con, player.x, player.y, ' ', libtcod.BKGND_NONE)
-
-    player.update()
 
     libtcod.sys_set_fps(LIMIT_FPS)
 
