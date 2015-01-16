@@ -1,14 +1,16 @@
 __author__ = 'Kot'
 import libtcodpy as libtcod
 
+
 class Entity(object):
-    def __init__(self, name, x, y, char, color, keylist=None):
+    def __init__(self, name, x, y, char, color, mapdata, keylist=None):
         self.name = name
         self.x = x
         self.y = y
         self.char = char
         self.color = color
         self.keylist = keylist
+        self.mapdata = mapdata
 
     def update(self):
         return
