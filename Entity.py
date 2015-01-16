@@ -11,6 +11,8 @@ class Entity(object):
         self.color = color
         self.keylist = keylist
         self.mapdata = mapdata
+        self.fov = 45
+        self.lookAt = 2
 
     def update(self):
         return

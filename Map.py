@@ -29,7 +29,9 @@ class Map:
                     self.map[x][y] = Tile(True)
                 else:
                     type = randint(0, 15)
-                    if type >= 0 and type <= 1:
+                    if type == 0:
+                        self.map[x][y] = Tile(True)
+                    elif type >= 1 and type <= 3:
                         self.map[x][y] = Tile(False, color=Colors['DIRT'])
                     else:
                         self.map[x][y] = Tile(False, color=Colors['GRASS'])
