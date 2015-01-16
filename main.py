@@ -9,7 +9,7 @@ from Map import Map
 
 SCREEN_WIDTH = 80
 SCREEN_HEIGHT = 50
-LIMIT_FPS = 20
+LIMIT_FPS = 15
 
 MAP_WIDTH = 80
 MAP_HEIGHT = 45
@@ -26,11 +26,14 @@ libtcod.sys_set_fps(LIMIT_FPS)
 kb = Keyboard(KEYLIST)
 
 mapO = Map(MAP_WIDTH, MAP_HEIGHT)
-map = mapO.create_map()
+
+map = mapO.load_map('level1.lvl')
+
+'''map = mapO.create_map()
 map[30][22].blocked = True
 map[30][22].block_sight = True
 map[50][22].blocked = True
-map[50][22].block_sight = True
+map[50][22].block_sight = True'''
 
 player = Player('player', SCREEN_WIDTH/2, SCREEN_HEIGHT/2, '@', map, KEYLIST)
 npc = Entity('npc', 10, 10, '@', libtcod.yellow, map)
@@ -54,6 +57,4 @@ while not libtcod.console_is_window_closed():
 
     libtcod.console_blit(con, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0, 0, 0)
     libtcod.console_flush()
-
-    libtcod.sys_set_fps(LIMIT_FPS)
 
