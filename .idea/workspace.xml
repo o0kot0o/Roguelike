@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2ad4c48-13cf-4a19-bb9f-97f6dd5a65ef" name="Default" comment="Made the player walkable - TODO: Create player class&#10;Added double buffering.&#10;Created a 'Keyboard' class (Yes I know I'm using global variables!)&#10;&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keyboard.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+    <list default="true" id="c2ad4c48-13cf-4a19-bb9f-97f6dd5a65ef" name="Default" comment="TODO: Create Player Class&#10;Moved the 'Keyboard&quot; class to it own file&#10;Keyboard no longer uses global variable, instead takes a keylist and returns a keylist.&#10; 'kb = Keyboard.Keyboard(KEYLIST)&#10; 'KEYLIST = kb.update()&#10;&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Roguelike.iws" />
@@ -31,7 +29,7 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2238806" vertical-offset="375" max-vertical-offset="1008">
+            <state vertical-scroll-proportion="0.5813953" vertical-offset="375" max-vertical-offset="1008">
               <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
               <folding>
                 <element signature="e#43#70#0" expanded="true" />
@@ -332,7 +330,13 @@
       <option name="project" value="LOCAL" />
       <updated>1421418958354</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="TODO: Create Player Class&#10;Moved the 'Keyboard&quot; class to it own file&#10;Keyboard no longer uses global variable, instead takes a keylist and returns a keylist.&#10; 'kb = Keyboard.Keyboard(KEYLIST)&#10; 'KEYLIST = kb.update()&#10;&#10;">
+      <created>1421419600751</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1421419600751</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -357,16 +361,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32673267" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.747557" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25895765" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32838285" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32838285" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32838285" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41205212" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32736155" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41205212" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32838285" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26299694" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -399,7 +403,8 @@
     <MESSAGE value="Just testing out pycharms git integration." />
     <MESSAGE value="Initial libtcod setup and drawing simple character to the screen." />
     <MESSAGE value="Made the player walkable - TODO: Create player class&#10;Added double buffering.&#10;Created a 'Keyboard' class (Yes I know I'm using global variables!)&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made the player walkable - TODO: Create player class&#10;Added double buffering.&#10;Created a 'Keyboard' class (Yes I know I'm using global variables!)&#10;&#10;" />
+    <MESSAGE value="TODO: Create Player Class&#10;Moved the 'Keyboard&quot; class to it own file&#10;Keyboard no longer uses global variable, instead takes a keylist and returns a keylist.&#10; 'kb = Keyboard.Keyboard(KEYLIST)&#10; 'KEYLIST = kb.update()&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="TODO: Create Player Class&#10;Moved the 'Keyboard&quot; class to it own file&#10;Keyboard no longer uses global variable, instead takes a keylist and returns a keylist.&#10; 'kb = Keyboard.Keyboard(KEYLIST)&#10; 'KEYLIST = kb.update()&#10;&#10;" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -443,7 +448,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2238806" vertical-offset="375" max-vertical-offset="1008">
+        <state vertical-scroll-proportion="0.5813953" vertical-offset="375" max-vertical-offset="1008">
           <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
           <folding>
             <element signature="e#43#70#0" expanded="true" />
