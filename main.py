@@ -4,6 +4,7 @@ __name__ = 'Roguelike'
 import libtcodpy as libtcod
 from Keyboard import Keyboard
 from Player import Player
+from Entity import Entity
 
 SCREEN_WIDTH = 80
 SCREEN_HEIGHT = 50
@@ -19,15 +20,22 @@ con = libtcod.console_new(SCREEN_WIDTH, SCREEN_HEIGHT)
 libtcod.sys_set_fps(LIMIT_FPS)
 
 kb = Keyboard(KEYLIST)
-player = Player('player', SCREEN_WIDTH/2, SCREEN_HEIGHT/2, KEYLIST)
+
+player = Player('player', SCREEN_WIDTH/2, SCREEN_HEIGHT/2, '@', KEYLIST)
+npc = Entity('npc', 10, 10, '@', libtcod.yellow)
+
+entities = [npc, player]
 
 while not libtcod.console_is_window_closed():
     libtcod.console_clear(con)
 
     KEYLIST = kb.update()
-    player.update()
 
-    player.render(con)
+    for entity in entities:
+        entity.update()
+
+    for entity in entities:
+        entity.render(con)
 
     libtcod.console_blit(con, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0, 0, 0)
     libtcod.console_flush()
